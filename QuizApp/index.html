@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz Timer</title>
+    <style type="text/css">
+    body{
+        background: #6cf;
+    }
+        #display{
+            margin: auto;
+            width: 500px;
+            height: 207px;
+            text-align: center;
+            margin-top: 230px;
+            background-color:lightblue;
+        }
+        #click{
+            text-decoration: none;
+            margin-top: 100px;
+            display: inline-block;
+            border: 2px solid blue;
+            padding: 10px;
+            font-weight: 600;
+            color: white;
+        }
+    
+    </style>
+
+</head>
+<body>
+    <div id="display">
+        <h1 id="Time"></h1>
+        <a href="#" id="click"  onclick="initial()">Start Quiz </a>
+    </div>
+</body>
+<script>
+   var timer;
+   var  counter = 10;
+ function initial(){
+      timer = setInterval(Dectime,1000);
+ }
+ function Dectime(){
+        counter =  counter - 1 ;
+        if (counter <= 0){
+            //var a = document.getElementById('Time');
+           // a.innerHTML = "Times Up"
+            clearInterval(timer);
+            window.location = "SelectProject.html";
+            return;
+        }
+        document.getElementById('display').textContent =  counter;
+ }
+</script>
+</html>

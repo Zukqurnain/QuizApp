@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="quizStyle.css">
+</head>
+<body>
+    <div id="quiz-container"  class="container">
+		<div id="title">General	Knowledge Question</div>
+         <div id="question"></div>	<!--	display	Questions -->
+		<label class="option"><input type="radio" name="option" value="1"><span id="option1"></span> </label>
+		<br>
+        <label class="option"><input type="radio" name="option" value="2"><span id="option2"></span> </label>
+		<br>
+		<label class="option"><input type="radio" name="option" value="3"><span id="option3"></span> </label>
+		<br>
+		<label class="option"><input type="radio" name="option" value="4"><span id="option4"></span> </label>
+		<br/>
+		<button id="nextButton" class="button"  onclick="nextQuestion()">Next</button>
+
+</div>
+<div id="result" style="display: none;"></div>	<!--	result	Show	-->
+<script src="questions.js"></script>
+<script	src="questions-script.js"></script>
+</script>    
+</body>
+</html>
